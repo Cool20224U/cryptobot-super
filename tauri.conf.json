@@ -1,0 +1,6 @@
+{
+  "productName": "CryptoBot Super",
+  "version": "4.0",
+  "identifier": "com.cryptobotsuper.app",
+  "build": { "frontendDist": "../src/gui.py", "devUrl": "http://localhost:8501" }
+}
