@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cryptobot-super
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run src/gui.py --server.port=$PORT
+    plan: free
