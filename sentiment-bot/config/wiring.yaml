@@ -1,0 +1,19 @@
+# Module wiring: which primary/fallbacks are active. Secrets NEVER live here -
+# they come from env vars / secrets manager only.
+ingest:
+  primary: x_stream
+  fallback_a: aggregator
+  fallback_b: coarse
+score:
+  primary: llm
+  fallback_a: lexicon
+  fallback_b: velocity
+signals:
+  mode_priority: [contrarian, momentum, ta_only]
+exec:
+  primary: paper        # paper | ccxt | flat
+  fallback_a: ccxt       # venue B - keep small balances only
+  fallback_b: flat       # cancel all + protective stops only
+risk:
+  pretrade_service: true   # V2
+  edge_decay_monitor: true  # V2

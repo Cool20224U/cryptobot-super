@@ -1,0 +1,4 @@
+sentiment-bot/data/
+sentiment-bot/.env
+__pycache__/
+*.pyc
