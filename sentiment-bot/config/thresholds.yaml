@@ -1,0 +1,12 @@
+# All tunables with sanity bounds - values outside bounds fail closed at load.
+contrarian_euphoria_pct: 0.95
+contrarian_capitulation_pct: 0.05
+momentum_score_min: 0.6
+min_posts_per_signal: 5
+ta_long_rsi_min: 40
+ta_short_rsi_max: 60
+bounds:
+  contrarian_euphoria_pct: [0.90, 0.99]
+  contrarian_capitulation_pct: [0.01, 0.10]
+  momentum_score_min: [0.3, 0.95]
+  min_posts_per_signal: [3, 50]
